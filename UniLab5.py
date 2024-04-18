@@ -5,17 +5,17 @@ import random
 while True:
     
     checker = False
-    primaryChoice = input("Выбор задания для проверки : \n1)\n2)\n3)\n4)\n5) - Выход\nВыбор : ")
+    primaryChoice = input("Р’С‹Р±РѕСЂ Р·Р°РґР°РЅРёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё : \n1)\n2)\n3)\n4)\n5) - Р’С‹С…РѕРґ\nР’С‹Р±РѕСЂ : ")
     if [num for num in primaryChoice if num not in ".,/*-+1234567890"]: checker = True
     if checker == True:
-        print("Так нельзя")
+        print("РўР°Рє РЅРµР»СЊР·СЏ")
         break
     primaryChoice = int(primaryChoice)
     
     if primaryChoice == 1:
         mistahFlag = 0
         ListOfNumbers = list()
-        humanAnswer = input("Угадай число от 0 до 15 : ")
+        humanAnswer = input("РЈРіР°РґР°Р№ С‡РёСЃР»Рѕ РѕС‚ 0 РґРѕ 15 : ")
         humanAnswer = int(humanAnswer)
         for i in range(5):
             Num = random.randint(0, 15)
@@ -23,9 +23,9 @@ while True:
                 mistahFlag = mistahFlag + 1
             ListOfNumbers.append(Num)
         if mistahFlag > 0: 
-            print("Ты угадал число, вот весь список чисел")
+            print("РўС‹ СѓРіР°РґР°Р» С‡РёСЃР»Рѕ, РІРѕС‚ РІРµСЃСЊ СЃРїРёСЃРѕРє С‡РёСЃРµР»")
         else:
-            print("нет такого числа, вот весь список чисел")
+            print("РЅРµС‚ С‚Р°РєРѕРіРѕ С‡РёСЃР»Р°, РІРѕС‚ РІРµСЃСЊ СЃРїРёСЃРѕРє С‡РёСЃРµР»")
         print(ListOfNumbers)
         
     if primaryChoice == 2:
@@ -46,19 +46,19 @@ while True:
         if len(ListOfChaos) != 0:
             print(ListOfChaos)
         else:
-            print("повторяющихся чисел нет")
+            print("РїРѕРІС‚РѕСЂСЏСЋС‰РёС…СЃСЏ С‡РёСЃРµР» РЅРµС‚")
 
     if primaryChoice == 3:
-        dayOfWeek = ("Воскресенье", "Суббота", "Пятница", "Четверг", "Среда", "Вторник", "Понедельник")
-        employee = input("Сколько хотите выходных в неделю ? ")
+        dayOfWeek = ("Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ", "РЎСѓР±Р±РѕС‚Р°", "РџСЏС‚РЅРёС†Р°", "Р§РµС‚РІРµСЂРі", "РЎСЂРµРґР°", "Р’С‚РѕСЂРЅРёРє", "РџРѕРЅРµРґРµР»СЊРЅРёРє")
+        employee = input("РЎРєРѕР»СЊРєРѕ С…РѕС‚РёС‚Рµ РІС‹С…РѕРґРЅС‹С… РІ РЅРµРґРµР»СЋ ? ")
         employee = int(employee)
         WeekEnds = dayOfWeek[:employee]
         WeekWork = dayOfWeek[employee:]
-        print("Выходные : ", WeekEnds, " Рабочие дни : ", WeekWork)
+        print("Р’С‹С…РѕРґРЅС‹Рµ : ", WeekEnds, " Р Р°Р±РѕС‡РёРµ РґРЅРё : ", WeekWork)
         
     if primaryChoice == 4:
-        myClass = ["Иванов", "Петров", "Сидоров", "Козлов", "Новиков", "Морозов", "Волков", "Лебедев", "Смирнов", "Кузнецов"]
-        otherClass = ["Федоров", "Соловьев", "Васильев", "Зайцев", "Павлов", "Семенов", "Голубев", "Виноградов", "Богданов", "Воробьев"]
+        myClass = ["РРІР°РЅРѕРІ", "РџРµС‚СЂРѕРІ", "РЎРёРґРѕСЂРѕРІ", "РљРѕР·Р»РѕРІ", "РќРѕРІРёРєРѕРІ", "РњРѕСЂРѕР·РѕРІ", "Р’РѕР»РєРѕРІ", "Р›РµР±РµРґРµРІ", "РЎРјРёСЂРЅРѕРІ", "РљСѓР·РЅРµС†РѕРІ"]
+        otherClass = ["Р¤РµРґРѕСЂРѕРІ", "РЎРѕР»РѕРІСЊРµРІ", "Р’Р°СЃРёР»СЊРµРІ", "Р—Р°Р№С†РµРІ", "РџР°РІР»РѕРІ", "РЎРµРјРµРЅРѕРІ", "Р“РѕР»СѓР±РµРІ", "Р’РёРЅРѕРіСЂР°РґРѕРІ", "Р‘РѕРіРґР°РЅРѕРІ", "Р’РѕСЂРѕР±СЊРµРІ"]
         sportClub = list()
         for i in range(5):
             choicer = random.randint(0,1)
@@ -68,15 +68,15 @@ while True:
             if choicer == 1:
                 howMucher = random.randint(0,10)
                 sportClub.append(otherClass[howMucher])
-        print("Список спортивный : ", sportClub, " длина списка : ", len(sportClub))
-        print("Исходные списки групп : ", myClass, otherClass)
+        print("РЎРїРёСЃРѕРє СЃРїРѕСЂС‚РёРІРЅС‹Р№ : ", sportClub, " РґР»РёРЅР° СЃРїРёСЃРєР° : ", len(sportClub))
+        print("РСЃС…РѕРґРЅС‹Рµ СЃРїРёСЃРєРё РіСЂСѓРїРї : ", myClass, otherClass)
         sportClub = sorted(sportClub)
-        print("Сортированный список спортивных : ", sportClub)
+        print("РЎРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ СЃРїРёСЃРѕРє СЃРїРѕСЂС‚РёРІРЅС‹С… : ", sportClub)
         ivanovPow = 0
         for i in range(5):
-            if "Иванов" == sportClub[i]:
+            if "РРІР°РЅРѕРІ" == sportClub[i]:
                 ivanovPow = ivanovPow + 1
-        print("Иванов встречается в списке спортивных : ", ivanovPow)
+        print("РРІР°РЅРѕРІ РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ РІ СЃРїРёСЃРєРµ СЃРїРѕСЂС‚РёРІРЅС‹С… : ", ivanovPow)
         
     if primaryChoice == 5: 
             break
